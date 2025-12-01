@@ -134,7 +134,7 @@ mcp-remote is a lightweight bridge that lets MCP clients that can only talk to l
 
 
 
-## Local MCP 
+## Local MCP
 
 ### Prerequisites 🔧
 
@@ -148,10 +148,17 @@ Before you begin, ensure you have:
     - `node --version`
 - [Git](https://git-scm.com/downloads) installed (only needed if using Git installation method)
   - On macOS: `brew install git`
-  - On Linux: 
+  - On Linux:
     - Debian/Ubuntu: `sudo apt install git`
     - RedHat/CentOS: `sudo yum install git`
   - On Windows: Download [Git for Windows](https://git-scm.com/download/win)
+
+### Environment Variables 🔐
+
+The following environment variables are supported:
+
+- `TAVILY_API_KEY` (required): Your Tavily API key
+- `TAVILY_BASE_URL` (optional): Custom base URL for Tavily API (defaults to `https://api.tavily.com`)
 
 ## Tavily MCP server installation ⚡
 

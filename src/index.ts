@@ -16,6 +16,8 @@ if (!API_KEY) {
   throw new Error("TAVILY_API_KEY environment variable is required");
 }
 
+const BASE_URL = process.env.TAVILY_BASE_URL || 'https://api.tavily.com';
+
 
 interface TavilyResponse {
   // Response structure from Tavily API
@@ -58,10 +60,10 @@ class TavilyClient {
   private server: Server;
   private axiosInstance;
   private baseURLs = {
-    search: 'https://api.tavily.com/search',
-    extract: 'https://api.tavily.com/extract',
-    crawl: 'https://api.tavily.com/crawl',
-    map: 'https://api.tavily.com/map'
+    search: `${BASE_URL}/search`,
+    extract: `${BASE_URL}/extract`,
+    crawl: `${BASE_URL}/crawl`,
+    map: `${BASE_URL}/map`
   };
 
   constructor() {
